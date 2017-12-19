@@ -23,8 +23,12 @@ class App extends Component {
     }
 
     search(searchTerm) {
-        Spotify.search(searchTerm).then(tracks => this.setState({searchResults: tracks}) );
+        Spotify.search(searchTerm).then(searchResults => {
+        this.setState({searchResults: searchResults}); 
+      });
     }
+
+
 
     savePlaylist(){
         Spotify.savePlaylist(this.state.playlistName, this.state.playlistTracks.map(track => track.uri));
