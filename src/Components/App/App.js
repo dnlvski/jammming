@@ -11,7 +11,7 @@ class App extends Component {
         super(props);
         this.state = {
             searchResults: [],
-            playlistName: "Test Playlist",
+            playlistName: "New Playlist",
             playlistTracks: []
         };
 
@@ -28,7 +28,6 @@ class App extends Component {
 
     savePlaylist(){
         Spotify.savePlaylist(this.state.playlistName, this.state.playlistTracks.map(track => track.uri));
-//    SearchBar.clearSearchBar();
         this.setState({
             searchResults: [],
             playlistName: "New Playlist",
