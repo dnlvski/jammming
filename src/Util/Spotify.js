@@ -1,5 +1,5 @@
 const clientId = '47613998e99e457db3bbf36e1233e30e';
-const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'http://shiny-route.surge.sh/';
 
 let accessToken;
 let userId;
